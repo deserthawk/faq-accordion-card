@@ -1,0 +1,221 @@
+:root {
+    --faq-card-width: 900px;
+    --faq-card-height: 450px;
+    --faq-question-width: 80%;
+
+    --faq-card-vertical-width: 300px;
+}
+
+body {
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: hsl(238, 29%, 16%);
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 2.5em;
+    margin-bottom: 1em;
+}
+
+.faq-card {
+    min-width: var(--faq-card-width);
+    width: var(--faq-card-width);
+    min-height: var(--faq-card-height);
+    background-color: white;
+    margin: 0 auto 10px auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: 0px 14px 20px 6px rgb(0 0 0 / 19%);
+}
+
+.faq-card-left {
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+
+.faq-card-left-img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-card-left-overlay {
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-size: 600px 500px;
+    background-repeat: no-repeat;
+    height: 200%;
+    width: 200%;
+    position: absolute;
+    top: -50px;
+    left: -200px;
+
+}
+
+.faq-card-left-overlay::before {
+    content: "";
+    background-image: url("images/illustration-woman-online-desktop.svg");
+    background-size: 400px 300px;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 200%;
+    position: absolute;
+    left: 170px;
+    top: 100px;
+}
+
+.faq-card-left-box {
+    background-image: url("images/illustration-box-desktop.svg");
+    background-size: 200px 180px;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 200%;
+    position: absolute;
+    left: -70px;
+    top: 155px;
+}
+
+.faq-card-right {
+    height: 100%;
+    width: 50%;
+}
+
+.faq-question-list {
+    position: relative;
+    z-index: 0;
+}
+
+.faq-question-list hr {
+    width: var(--faq-question-width);
+    margin-left: 0;
+    border-color: hsl(240, 5%, 91%);
+}
+
+.faq-question {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: var(--faq-question-width);
+    margin-bottom: 0.7em;
+    color: hsl(240, 6%, 50%);
+    cursor: pointer;
+}
+
+.faq-question:hover {
+    color: hsl(14, 88%, 65%) !important;
+}
+
+.faq-question img {
+    margin-top: 4px;
+    width: 15px;
+    height: 10px;
+}
+
+.faq-answer {
+    width: var(--faq-question-width);
+    margin-bottom: 1em;
+    color: hsl(240, 6%, 50%);
+    display: none;
+    font-size: 0.9em;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: hsl(240, 5%, 91%);
+    z-index: 0;
+}
+
+.attribution a {
+    color: hsl(238, 29%, 16%);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@media (max-width:910px) {
+
+    h1 {
+        font-size: 2em;
+        font-weight: 700;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
+    .faq-card {
+        width: var(--faq-card-vertical-width);
+        min-width: var(--faq-card-vertical-width);
+        max-height: 500px;
+        min-height: 500px;
+        flex-direction: column;
+    }
+
+    .faq-card-left {
+        height: 150px;
+        width: 100%;
+    }
+
+    .faq-card-left-img {
+        overflow: visible;
+    }
+
+    .faq-card-left-overlay {
+        background-size: 200px 200px;
+        height: 200%;
+        width: 100%;
+        top: -100px;
+        left: 48px;
+    }
+
+    .faq-card-left-overlay::before{
+        background-image: url("images/illustration-woman-online-mobile.svg");
+        background-size: 200px 150px;
+        height: 200%;
+        width: 100%;
+        top: 20px;
+        left: 0;
+    }
+
+    .faq-card-left-box{
+        display: none;
+    }
+
+    .faq-card-right {
+        width: 100%;
+    }
+
+
+    .faq-question {
+        width: 95%;
+        font-size: 0.9em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .faq-question-list hr {
+        width: 93%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .faq-answer{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 13px;
+    }
+}
