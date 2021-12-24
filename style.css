@@ -32,12 +32,12 @@ h1 {
     width: var(--faq-card-width);
     min-height: var(--faq-card-height);
     background-color: white;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 10px;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    box-shadow: 0px 14px 20px 6px rgb(0 0 0 / 19%);
+    box-shadow: 0 14px 20px 6px rgb(0 0 0 / 19%);
 }
 
 .faq-card-left {
