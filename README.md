@@ -52,4 +52,4 @@ It was quite a challenging challenge. It was especially difficult to place the i
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/deserthawk)
+- Frontend Mentor - [@deserthawk](https://www.frontendmentor.io/profile/deserthawk)
